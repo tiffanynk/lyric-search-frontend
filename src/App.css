@@ -1,25 +1,49 @@
 .App {
+  color: hsl(209, 20%, 25%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
 }
 
+header{
+  color: hsl(234, 62%, 26%);
+  height: 400px;
+  background-image: url('./headphones.jpg');
+}
+
+h1{
+  font-size: 45px;
+}
+
+input{
+  margin: 10px;
+}
+
 .search-form {
   display: flex;
   flex-direction: column;
   width: 20%;
-  margin: 0 auto;
+  margin: 20px auto;
   margin-bottom: 50px;
 }
 
 .result-list {
-  width: 50%;
+  margin: 0 auto;
+  width: 70%;
 }
 
 .result-card {
   display: flex;
-  border: 2px solid black;
   justify-content: space-between;
-  flex-direction: row;
+  padding: 5px;
+  margin: 5px auto;
+}
+
+button {
+  color: white;
+  background-color: hsl(234, 62%, 26%);
+  border: 1px solid grey;
+  border-radius: 3px;
+  box-shadow: 0 20px 40px rbga(0, 0, 0, .2);
 }

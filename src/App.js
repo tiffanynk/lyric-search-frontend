@@ -20,8 +20,10 @@ class App extends Component {
   render(){
     return (
       <main className='App'>
-        <h1>Lyrics Search</h1>
-        <SearchForm getSongs={this.getSongs}/>
+        <header>
+          <h1>Lyrics Search</h1>
+          <SearchForm getSongs={this.getSongs}/>
+        </header>
         <SongsContainer results={this.state.results}/>
       </main>
     )
