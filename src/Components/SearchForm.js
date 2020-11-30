@@ -16,12 +16,12 @@ class SearchForm extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
         this.props.getSongs(this.state.searchTerm)
+        event.target.reset()
     }
 
     render(){
         return(
             <form className='search-form' onSubmit={this.handleSubmit}>
-                <label>Search</label>
                 <input 
                     name='searchTerm' 
                     placeholder='Enter Artist Name / Song Title'
