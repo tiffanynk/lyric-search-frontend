@@ -17,12 +17,16 @@ class App extends Component {
       .then(results => this.setState({results: results.data}))
   }
 
+  addToFavorites = () => {
+    console.log('added to favorite')
+  }
+
   render(){
     return (
       <main className='App'>
         <h1>Lyrics Search</h1>
         <SearchForm getSongs={this.getSongs}/>
-        <SongsContainer results={this.state.results}/>
+        <SongsContainer results={this.state.results} addToFavorites={this.addToFavorites} />
       </main>
     )
   }

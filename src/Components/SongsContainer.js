@@ -1,9 +1,9 @@
 import React from 'react';
 import SearchResult from './SearchResult';
 
-function SongsContainer({results}){
+function SongsContainer({results, addToFavorites}){
     const renderSearchResult = () => {
-        return results.map(result => <SearchResult key={result.id} {...result}/>)
+        return results.map(result => <SearchResult key={result.id} {...result} addToFavorites={addToFavorites} />)
     }
 
     return(
