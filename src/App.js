@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SearchForm from './Components/SearchForm';
+import SongsContainer from './Components/SongsContainer';
 import './App.css';
 
 const apiURL = 'https://api.lyrics.ovh/'
@@ -13,7 +14,7 @@ class App extends Component {
   getSongs = (searchTerm) => {
     fetch(apiURL + `suggest/${searchTerm}`)
       .then(response => response.json())
-      .then(results => this.setState({results}))
+      .then(results => this.setState({results: results.data}))
   }
 
   render(){
@@ -21,6 +22,7 @@ class App extends Component {
       <main className='App'>
         <h1>Lyrics Search</h1>
         <SearchForm getSongs={this.getSongs}/>
+        <SongsContainer results={this.state.results}/>
       </main>
     )
   }

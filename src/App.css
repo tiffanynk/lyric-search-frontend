@@ -12,3 +12,14 @@
   margin: 0 auto;
   margin-bottom: 50px;
 }
+
+.result-list {
+  width: 50%;
+}
+
+.result-card {
+  display: flex;
+  border: 2px solid black;
+  justify-content: space-between;
+  flex-direction: row;
+}

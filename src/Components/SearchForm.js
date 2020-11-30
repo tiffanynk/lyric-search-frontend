@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 class SearchForm extends Component {
 
     state = {
-        results: []
+        results: [],
+        searchTerm: ''
     }
 
     handleChange = (event) => {
@@ -14,7 +15,7 @@ class SearchForm extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        this.props.getSongs(event.target.value)
+        this.props.getSongs(this.state.searchTerm)
     }
 
     render(){
@@ -22,9 +23,9 @@ class SearchForm extends Component {
             <form className='search-form' onSubmit={this.handleSubmit}>
                 <label>Search</label>
                 <input 
-                    name='search-term' 
+                    name='searchTerm' 
                     placeholder='Enter Artist Name / Song Title'
-                    // onChange={}
+                    onChange={this.handleChange}
                     />
                 <input type='submit'/>
             </form>
